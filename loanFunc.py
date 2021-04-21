@@ -13,9 +13,20 @@ def show_info(loan, month):
     print(f'{key.title()} : {value}')
 
 
-def collect_interest():
+def collect_interest(loan):
+  loan['principal'] = loan['principal'] + loan['principal']*loan['rate']/12
+
+def make_monthly_payment(loan):
+  loan['principal'] = loan['principal'] - loan['monthly payment']
+
+  if loan['principal'] > 0:
+    loan['monthly paid'] += loan['monthly payment']
+  else:
+    
+
+def summarize():
   pass
 
-def make_monthly_payment():
-  pass
 
+def create_graph():
+  pass
