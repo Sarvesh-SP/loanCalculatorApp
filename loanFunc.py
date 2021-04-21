@@ -20,9 +20,10 @@ def make_monthly_payment(loan):
   loan['principal'] = loan['principal'] - loan['monthly payment']
 
   if loan['principal'] > 0:
-    loan['monthly paid'] += loan['monthly payment']
+    loan['money paid'] += loan['monthly payment']
   else:
-    
+    loan['money paid'] += loan['monthly payment'] + loan['principal']
+    loan['principal'] = 0
 
 def summarize():
   pass
